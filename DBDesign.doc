@@ -1,0 +1,24 @@
+users(
+    id int pk auto,
+    name varchar (40),
+    email varchar (50),
+    password varchar (90),
+    level varchar(10),
+    img varchar,
+)
+
+wines(
+id int pk auto,
+name varchar (40),
+cost float
+)
+
+specifications(
+    id int pk auto,
+    wines_id int fk,
+    brand varchar(20),
+    color varchar(7),
+    age varchar (15),
+    sugar varchar(15),
+    alevel float
+)
