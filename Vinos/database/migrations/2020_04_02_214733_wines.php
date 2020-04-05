@@ -16,8 +16,9 @@ class Wines extends Migration
         Schema::create('wines', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('reference')->unique();
             $table->float('cost',9,2);//nine digits before the dot and 2 after it
-            $table->string('slug');            
+            $table->string('slug')->unique();            
             $table->timestamps();
         });
     }

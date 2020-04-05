@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'admin','as'=>'admin'], function () {
+    Route::get('/', function () { return view('admin'); });
+    Route::get('/users', function () { return view('users'); });
+});

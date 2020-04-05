@@ -23,6 +23,7 @@ class Specifications extends Migration
            $table->string('age');
            $table->string('sugar');
            $table->string('alevel');// alcohol level number and ° added  before insert
+           $table->string('img');
            $table->timestamps();
        });
     }
