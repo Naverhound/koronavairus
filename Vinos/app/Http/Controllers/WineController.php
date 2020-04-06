@@ -31,7 +31,7 @@ public function store(Request $request)
         'img'=>'required'//TODO: resolver imágenes que no puedo validar ni por mimes
     ]);
     //dd($request);
-    if($validator->fails()){
+    if($validator->fails()){        
         dd('campos llenados incorrectamente en wines');//lline that prints in a new page
     }else{
         dd('done, mi chavo (hecho, si eres peña) en wines');//lline that prints in a new page

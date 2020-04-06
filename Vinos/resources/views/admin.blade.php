@@ -39,7 +39,7 @@
                 <div class="card-body">
                   <p class="text-center font-italic font-weight-bolder text-dark h4">First things First <i class="fas fa-wine-glass-alt"></i></p>
                   <hr>
-                  <form action="{{route('admin.store')}}" method="POST" id="specificationForm">
+                  <form action="{{route('admin.store')}}" method="POST" id="specificationForm" enctype="multipart/form-data" >
                     @csrf <!--token that identyfies the petition for laravel-->
                     <div class="row">
                       <div class="col-lg-6">

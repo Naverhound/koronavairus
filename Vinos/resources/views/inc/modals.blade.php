@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
     
       <div class="modal-content">
-        <form action="{{route('admin.user.store')}}" method="POST" class="register-form" id="userForm">
+        <form action="{{route('admin.user.store')}}" method="POST" class="register-form" id="userForm" enctype="multipart/form-data">
             @csrf <!--token that identyfies the petition for laravel-->
             <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">New employee</h5>
