@@ -15,7 +15,8 @@
             <h1 class="h3 mb-0 text-gray-800">Dashboard main</h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Pendientee</a>
           </div>
-        @yield('inc.graphs')
+          <!-- Graphs area -->
+        @include('inc.graphs')
 
           <!-- Wines Form Row -->            
               <div class="card shadow mb-4 row">
