@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin','as'=>'admin.'], function () {
-    Route::resource('/', 'WineController');
+    Route::resource('wine', 'WineController');
     Route::resource('user','UserController');//first parameter is name for the route, use "php artisan route:list" in console, to check the names of the routes
+   
 });

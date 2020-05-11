@@ -13,10 +13,14 @@ class Specifications extends Migration
      */
     public function up()
     {
+        Schema::enableForeignKeyConstraints();
        Schema::create('specifications', function (Blueprint $table) {
+           
            $table->bigIncrements('id');
-           $table->unsignedInteger('wine_id');//relation with wines table
-           $table->string('slug');
+           $table->unsignedBigInteger('wine_id');//relation with wines table
+           $table->foreign('wine_id')->references('id')->on('wines')
+           ->onDelete('cascade');
+           $table->dropForeign(['wine_id']);
            $table->string('region');
            $table->string('brand');
            $table->string('color');

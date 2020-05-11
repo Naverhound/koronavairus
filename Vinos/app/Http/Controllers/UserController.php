@@ -30,7 +30,8 @@ class UserController extends Controller
     public function store(Request $request)
     {//the regex in here is for a password that must be more than 8 characters long, should contain at-least 1 Uppercase, 1 Lowercase, 1 Numeric and 1 special character
         # code...
-        $validator= Validator::make($request->all(),[//start validating everything that the request is receiving
+        dd($request); 
+        $this->validate($request,[//start validating everything that the request is receiving
             //left key, must be named as the "name" atribute of the inputs included in the request
             'name'=>'required|min:3|max:20',
             'email'=>'required|min:11|email',
@@ -38,11 +39,11 @@ class UserController extends Controller
             'level'=>'required|min:5',
             'img'=>'required'//TODO: resolver imágenes que no puedo validar ni por mimes
         ]);
-        if($validator->fails()){
+        /*if($validator->fails()){// is useful when using ($validador= Validator::make($request->all(),[]) up there insted of $this->validate...
             dd('campos llenados incorrectamente');//lline that prints in a new page
         }else{
             dd('done, mi chavo (hecho, si eres peña)');//lline that prints in a new page
-        }
+        }*/
         
     }
 }

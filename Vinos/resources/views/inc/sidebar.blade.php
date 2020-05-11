@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('admin.index')}}">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('admin.wine.index')}}">
       <div class="sidebar-brand-icon rotate-n-15">
         <i class="fa fa-wine-bottle" aria-hidden="true"></i>
       </div>
@@ -13,7 +13,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item ">
-    <a class="nav-link" href="{{route('admin.index')}}">
+    <a class="nav-link" href="{{route('admin.wine.index')}}">
         <i class="fa fa-globe" aria-hidden="true"></i>
         <span>Home</span></a>
     </li>
